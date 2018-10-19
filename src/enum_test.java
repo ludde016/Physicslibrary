@@ -9,7 +9,7 @@ public class enum_test {
 	public static String heat(Fluidtable fluid) {
 	
 		String str = "Energin som krävs för att värma 1 kg 1 grad "+ fluid.name() + " är inte: ";
-		return str + fluid.heatcapacity * 1 * fluid.density; q
+		return str + fluid.heatcapacity * 1 * fluid.density;
 		
 	}
 	
