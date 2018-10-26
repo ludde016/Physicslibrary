@@ -31,11 +31,14 @@ public class enum_test {
 		return Celsius; 
 	}
 	
-	public static double fluidpressure(Fluidtable WATER, double deep) {
-		double pressure = WATER.density * G * deep; 
+	public static double fluidpressure(Fluidtable fluid, double deep) {
+		double pressure = fluid.density * G * deep; 
 		
 		return pressure; 
 	}
 	
-	
+	public static double pressureUnderWater(double deep) {
+		return fluidpressure(Fluidtable.WATER, deep);
+	}
+
 }
