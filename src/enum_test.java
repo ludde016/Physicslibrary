@@ -15,6 +15,7 @@ public class enum_test {
 		System.out.println(fahrenheitToCelsius(intag));
 		System.out.println(kelvinToCelsius(intag));
 		System.out.println(fluidpressure(Fluidtable.WATER, 10));
+		System.out.println(kineticEnergy(10, 10));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -38,7 +39,13 @@ public class enum_test {
 	}
 	
 	public static double pressureUnderWater(double deep) {
-		return fluidpressure(Fluidtable.WATER, deep);
+		return fluidpressure(Fluidtable.WATER, deep); // En metod som endast använder förra metoden fast sätter in vätskan "WATER"
 	}
 
+	public static double kineticEnergy(double mass, double velocity) {
+		double energy = (mass * velocity * velocity)/2;
+		
+		return energy; 
+	}
+	
 }
