@@ -14,6 +14,7 @@ public class enum_test {
 		
 		System.out.println(fahrenheitToCelsius(intag));
 		System.out.println(kelvinToCelsius(intag));
+		System.out.println(fluidpressure(Fluidtable.WATER, 10));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -28,6 +29,12 @@ public class enum_test {
 		double Celsius = kelvin - 273.15; 
 		
 		return Celsius; 
+	}
+	
+	public static double fluidpressure(Fluidtable WATER, double deep) {
+		double pressure = WATER.density * G * deep; 
+		
+		return pressure; 
 	}
 	
 	
