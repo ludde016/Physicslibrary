@@ -14,11 +14,11 @@ public enum Fluidtable {
 	double steamEntalpy; 
 
 	
-	Fluidtable (double fi, double c, double m, double b, double py){
-		density = fi;
-		heatcapacity = c;
+	Fluidtable (double d, double c, double m, double b, double py){
+		density = d * 1E3;
+		heatcapacity = c * 1E3; // For 1kg
 		smeltpoint = m;
 		boilpoint = b;
-		steamEntalpy = py; 
+		steamEntalpy = py * 1E3; 
 	}
 }
