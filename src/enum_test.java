@@ -14,11 +14,12 @@ public class enum_test {
 		
 		System.out.println(fahrenheitToCelsius(intag));
 		System.out.println(kelvinToCelsius(intag));
-		System.out.println(fluidpressure(Fluidtable.WATER, 10));
+		System.out.println(pressureUnderWater(10));
 		System.out.println(kineticEnergy(2, 2));
 		System.out.println(potentialEnergy(2, 5));
 		System.out.println(delta(1, 10));
 		System.out.println(fallSpeed(2.5));
+		System.out.println(volumeToMass(Fluidtable.WATER, 1));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -67,6 +68,12 @@ public class enum_test {
 		double delta = last - first;
 		
 		return delta;
+	}
+	
+	public static double volumeToMass(Fluidtable fluid, double volume) {
+		double mass = fluid.density * volume;
+		
+		return mass; 
 	}
 	
 }
