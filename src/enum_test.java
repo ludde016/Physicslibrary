@@ -20,6 +20,7 @@ public class enum_test {
 		System.out.println(delta(1, 10));
 		System.out.println(fallSpeed(2.5));
 		System.out.println(volumeToMass(Fluidtable.WATER, 1));
+		System.out.println(volumeToMass(Gastable.AIR, 1));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -74,6 +75,12 @@ public class enum_test {
 		double mass = fluid.density * volume;
 		
 		return mass; 
+	}
+	
+	public static double volumeToMass(Gastable gas, double volume) {
+		double mass = gas.density * volume;
+		
+		return mass;
 	}
 	
 }
