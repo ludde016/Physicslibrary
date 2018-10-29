@@ -17,6 +17,7 @@ public class enum_test {
 		System.out.println(fluidpressure(Fluidtable.WATER, 10));
 		System.out.println(kineticEnergy(2, 2));
 		System.out.println(potentialEnergy(2, 5));
+		System.out.println(delta(1, 10));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -55,6 +56,12 @@ public class enum_test {
 		return energy; 
 	}
 	
-	
+	public static double delta(double first, double last) {
+		double delta = last - first;
+		
+		return delta;
+		
+		
+	}
 	
 }
