@@ -15,7 +15,8 @@ public class enum_test {
 		System.out.println(fahrenheitToCelsius(intag));
 		System.out.println(kelvinToCelsius(intag));
 		System.out.println(fluidpressure(Fluidtable.WATER, 10));
-		System.out.println(kineticEnergy(10, 10));
+		System.out.println(kineticEnergy(2, 2));
+		System.out.println(potentialEnergy(2, 5));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -47,5 +48,13 @@ public class enum_test {
 		
 		return energy; 
 	}
+	
+	public static double potentialEnergy(double mass, double height) {
+		double energy = mass * g_swe * height;
+		
+		return energy; 
+	}
+	
+	
 	
 }
