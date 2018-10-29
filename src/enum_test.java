@@ -18,6 +18,7 @@ public class enum_test {
 		System.out.println(kineticEnergy(2, 2));
 		System.out.println(potentialEnergy(2, 5));
 		System.out.println(delta(1, 10));
+		System.out.println(fallSpeed(2.5));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -35,7 +36,7 @@ public class enum_test {
 	}
 	
 	public static double fluidpressure(Fluidtable fluid, double deep) {
-		double pressure = fluid.density * G * deep; 
+		double pressure = fluid.density * G * deep; // Ger inget värde i konsolen. 
 		
 		return pressure; 
 	}
@@ -56,12 +57,16 @@ public class enum_test {
 		return energy; 
 	}
 	
+	public static double fallSpeed(double height) {
+		double speed = Math.sqrt(2 * G * height);
+		
+		return speed;
+	}
+	
 	public static double delta(double first, double last) {
 		double delta = last - first;
 		
 		return delta;
-		
-		
 	}
 	
 }
