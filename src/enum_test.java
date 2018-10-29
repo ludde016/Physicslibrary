@@ -22,6 +22,7 @@ public class enum_test {
 		System.out.println(volumeToMass(Fluidtable.WATER, 1));
 		System.out.println(volumeToMass(Gastable.AIR, 1));
 		System.out.println(volumeToMass(Solidtable.IRON, 1));
+		System.out.println(svtVelocity(10, 5));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -88,6 +89,12 @@ public class enum_test {
 		double mass = solid.density * volume;
 		
 		return mass;
+	}
+	
+	public static double svtVelocity(double distance, double time) {
+		double deltaV = distance/time; 
+		
+		return deltaV; 
 	}
 	
 }
