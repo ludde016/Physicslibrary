@@ -7,6 +7,7 @@ public class Exempel_Uppgifter {
 		System.out.println(enum_test.svtDistance(2.8, 60) * 60);
 		System.out.println(enum_test.heat(Fluidtable.WATER, 5, 1));
 		System.out.println(enum_test.fluidpressure(Fluidtable.WATER, 100));
+		System.out.println(enum_test.velocityToHeight(50/3.6)+ 1.8);
 
 	}
 }
