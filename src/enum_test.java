@@ -26,6 +26,7 @@ public class enum_test {
 		System.out.println(svtDistance(10, 5));
 		System.out.println(svtTime(10, 2));
 		System.out.println(work(50, 10));
+		System.out.println(power(1000, 2));
 		System.out.println(heat(Solidtable.IRON, 1, 2));
 		System.out.println(heat(Fluidtable.WATER, 1, 10));
 		System.out.println(heat(Gastable.AIR, 1, 1));
@@ -120,6 +121,12 @@ public class enum_test {
 		double work = force * distance;
 		
 		return work; 
+	}
+	
+	public static double power(double work, double time) {
+		double power = work/time; 
+		
+		return power;
 	}
 	
 	public static double heat(Solidtable solid, double mass, double deltaT) {
