@@ -5,7 +5,7 @@ public class Exempel_Uppgifter {
 	public static void main(String[] args) {
 		
 		System.out.println(ViktJarn(0.008));
-		System.out.println(TomasDistans(2.8, 3600));
+		System.out.println(TomasDistans(2.8, 60));
 	 
 	}
 	
@@ -17,7 +17,7 @@ public class Exempel_Uppgifter {
 	
 public static double TomasDistans(double velocity, double time) {
 		
-		return enum_test.svtDistance(velocity, time);
+		return enum_test.svtDistance(velocity, time) * 60;
 		
  }
 
