@@ -26,6 +26,7 @@ public class enum_test {
 		System.out.println(svtDistance(10, 5));
 		System.out.println(svtTime(10, 2));
 		System.out.println(work(50, 10));
+		System.out.println(heat(Solidtable.IRON, 1, 2));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -116,6 +117,12 @@ public class enum_test {
 		double work = force * distance;
 		
 		return work; 
+	}
+	
+	public static double heat(Solidtable solid, double mass, double deltaT) {
+		double heat = solid.heatcapacity * mass * deltaT;
+		
+		return heat;
 	}
 	
 }
