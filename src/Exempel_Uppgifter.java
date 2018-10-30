@@ -1,24 +1,12 @@
 
-
 public class Exempel_Uppgifter {
-	
-	public static void main(String[] args) {
-		
-		System.out.println(ViktJarn(0.008));
-		System.out.println(TomasDistans(2.8, 60));
-	 
-	}
-	
-	public static double ViktJarn(double deep) {
-		
-		return enum_test.volumeToMass(Solidtable.IRON, deep);
-		
-	}
-	
-public static double TomasDistans(double velocity, double time) {
-		
-		return enum_test.svtDistance(velocity, time) * 60;
-		
- }
 
+	public static void main(String[] args) {
+
+		System.out.println(enum_test.volumeToMass(Solidtable.IRON, 0.008));
+		System.out.println(enum_test.svtDistance(2.8, 60) * 60);
+		System.out.println(enum_test.heat(Fluidtable.WATER, 5, 1));
+		System.out.println(enum_test.fluidpressure(Fluidtable.WATER, 100));
+
+	}
 }
