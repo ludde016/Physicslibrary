@@ -25,6 +25,7 @@ public class enum_test {
 		System.out.println(svtVelocity(10, 5));
 		System.out.println(svtDistance(10, 5));
 		System.out.println(svtTime(10, 2));
+		System.out.println(work(50, 10));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -109,6 +110,12 @@ public class enum_test {
 		double time = distance / velocity;
 		
 		return time; 
+	}
+	
+	public static double  work(double force, double distance) {
+		double work = force * distance;
+		
+		return work; 
 	}
 	
 }
