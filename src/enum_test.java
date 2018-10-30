@@ -27,6 +27,9 @@ public class enum_test {
 		System.out.println(svtTime(10, 2));
 		System.out.println(work(50, 10));
 		System.out.println(heat(Solidtable.IRON, 1, 2));
+		System.out.println(heat(Fluidtable.WATER, 1, 10));
+		System.out.println(heat(Gastable.AIR, 1, 1));
+		System.out.println(velocityToHeight(9.82));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -123,6 +126,24 @@ public class enum_test {
 		double heat = solid.heatcapacity * mass * deltaT;
 		
 		return heat;
+	}
+	
+	public static double heat(Fluidtable fluid, double volume, double deltaT) {
+		double heat = fluid.heatcapacity * volume * deltaT;
+		
+		return heat; 
+	}
+	
+	public static double heat(Gastable gas, double volume, double deltaT) {
+		double heat = gas.heatcapacity * volume * deltaT;
+		
+		return heat; 
+	}
+	
+	public static double velocityToHeight(double velocity) {
+	double height = (velocity/G) * (velocity/2);
+	
+	return height;
 	}
 	
 }
