@@ -30,5 +30,17 @@ public class Exempel_Uppgifter {
 		}
 		System.out.println(hopp + " Antal gånger");
 		
+		//Uppgift 8, Tomas hoppar från ett 100 meter högt hopp torn (gör inte detta hemma). Hur hög fart kommer han upp i? 
+		System.out.println(enum_test.fallSpeed(100) + " m/s");
+		
+		//Uppgift 9, Hur mycket energi tar det att värma upp 2 liter vatten från 20 grader till 25 grader? (Använder endast 1 metod) 
+		System.out.println(Fluidtable.WATER.heatcapacity * 2 * Fluidtable.WATER.density * enum_test.delta(20, 25) + " Joule");
+		
+		//Uppgift 10, du vill att 10000 cm^3 vatten som är 18 grader celsius ska bli om till ånga, hur mycket energi tar det? (Använder metoder så mycket som det går)
+		double vatten = enum_test.heat(Fluidtable.WATER, (10000/1000), enum_test.delta(18, 100));
+		double anga = Fluidtable.WATER.steamEntalpy *  enum_test.volumeToMass(Fluidtable.WATER, 0.01); //Energin det tar att övergå från flytande medium till gas medium för vatten, alltså från vatten till ånga.
+		System.out.println(vatten + anga + " Joule");
+		
+		
 	}
 }
