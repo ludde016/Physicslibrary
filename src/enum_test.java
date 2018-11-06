@@ -136,13 +136,13 @@ public class enum_test {
 	}
 	
 	public static double heat(Fluidtable fluid, double volume, double deltaT) {
-		double heat = fluid.heatcapacity * (volume/1000) * fluid.density * deltaT;  //Fråga Joakim om denna, volym är i dm^3 så vi måste göra om det till m^3 och ta det * densitet
+		double heat = fluid.heatcapacity * volume * fluid.density * deltaT;  
 		
 		return heat; 
 	}
 	
 	public static double heat(Gastable gas, double volume, double deltaT) {
-		double heat = gas.heatcapacity * volume * gas.density * deltaT;   //Fråga Joakim om denna med, volym är i m^3 alltså 1 m^3 luft OCH INTE 1 kg
+		double heat = gas.heatcapacity * volume * gas.density * deltaT; 
 		
 		return heat; 
 	}

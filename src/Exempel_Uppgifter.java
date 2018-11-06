@@ -19,7 +19,12 @@ public class Exempel_Uppgifter {
 		System.out.println(enum_test.velocityToHeight(50/3.6)+ 1.8 + " Meter");
 		
 		//Uppgift 6, Bilens effekt
-		System.out.println(enum_test.power(enum_test.work(740*9.82, 100/3.6), 1) + "Watt"); //Fråga Joakim eller Tomas om denna
+		double velocity = 100/3.6;
+		double acceleration = velocity/4.4; 
+		double force = 740 * acceleration;
+		double distance = enum_test.svtDistance(100/3.6, 4.4); 
+		double work = enum_test.work(force, distance);
+		System.out.println(enum_test.power(work, 4.4) + " Watt");
 		
 		//Uppgift 7, Studsbollen som bara förlorar 1% av sin energi och studsar 299 gånger
 		double hopp = 0;
@@ -36,7 +41,7 @@ public class Exempel_Uppgifter {
 		//Uppgift 9, Hur mycket energi tar det att värma upp 2 liter vatten från 20 grader till 25 grader? (Använder endast 1 metod) 
 		System.out.println(Fluidtable.WATER.heatcapacity * 2 * Fluidtable.WATER.density * enum_test.delta(20, 25) + " Joule");
 		
-		//Uppgift 10, du vill att 10000 cm^3 vatten som är 18 grader celsius ska bli om till ånga, hur mycket energi tar det? (Använder metoder så mycket som det går)
+		//Uppgift 10, Du vill att 10000 cm^3 vatten som är 18 grader celsius ska bli till ånga, hur mycket energi tar det? (Använder metoder så många som det går)
 		double vatten = enum_test.heat(Fluidtable.WATER, (10000/1000), enum_test.delta(18, 100));
 		double anga = Fluidtable.WATER.steamEntalpy *  enum_test.volumeToMass(Fluidtable.WATER, 0.01); //Energin det tar att övergå från flytande medium till gas medium för vatten, alltså från vatten till ånga.
 		System.out.println(vatten + anga + " Joule");
