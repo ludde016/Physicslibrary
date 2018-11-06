@@ -153,4 +153,47 @@ public class enum_test {
 	return height;
 	}
 	
+	public static double force(double mass, double acceleration) {
+		double kraft = mass * acceleration;
+		
+		return kraft;
+		
+	}
+	
+	public static double distance(double time, double acceleration) {
+		double distance = (time * time * acceleration)/2;
+		
+		return distance;
+		
+	}
+	
+	public static double friction(double Fn, double My) {
+		double FrictionForce = Fn * My;
+		
+		return FrictionForce;
+		
+	}
+	
+	public static double pressure(double force, double area) {
+		double pressure = force/area;
+		
+		return pressure;
+		
+	}
+	
+	public static double liftForce(Fluidtable fluid, double volume) {
+		double lift = fluid.density * g_swe * volume;
+		
+		return lift;
+		
+	}
+	
+	public static double efficiency(double inputEnergy, double usefulEnergy) {
+		double efficiency = usefulEnergy/inputEnergy;
+		
+		return efficiency;
+		
+	}
+	
+	
 }
