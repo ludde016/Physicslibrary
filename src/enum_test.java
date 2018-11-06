@@ -30,7 +30,16 @@ public class enum_test {
 		System.out.println(heat(Solidtable.IRON, 1, 2));
 		System.out.println(heat(Fluidtable.WATER, 1, 10));
 		System.out.println(heat(Gastable.AIR, 1, 1));
-		System.out.println(velocityToHeight(9.82));
+		System.out.println(force(1, 9.82));
+		System.out.println(distance(5, 10));
+		System.out.println(friction(100, 0.8));
+		System.out.println(pressure(250, 2));
+		System.out.println(liftForce(Fluidtable.WATER, 0.02));
+		System.out.println(efficiency(1000, 800));
+		System.out.println(horsepower(1500));
+		System.out.println(fluidToSteam(Fluidtable.WATER, 1));
+		System.out.println(density(120, 3));
+		System.out.println(solidToLiquid(Solidtable.IRON, 1));
 	}
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
